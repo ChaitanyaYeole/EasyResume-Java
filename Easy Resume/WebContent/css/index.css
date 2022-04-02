@@ -1,0 +1,420 @@
+@charset "ISO-8859-1";
+
+@font-face {
+	font-family: 'Plain-Regular';
+	src: url('../fonts/Plain-Regular.woff2') format('woff2'),
+		url('../fonts/Plain-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Plain-Light';
+	src: url('../fonts/Plain-Light.woff2') format('woff2'),
+		url('../fonts/Plain-Light.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Plain-Bold';
+	src: url('../fonts/Plain-Bold.woff2') format('woff2'),
+		url('../fonts/Plain-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+:root { 
+	--primary-color: #4481eb; 
+	--secondary-color: #f1c111; 
+	--white-color: #ffffff; 
+	--dark-color: #171819; 
+	--project-bg: #f0f8ff; 
+	--menu-bg: #4481eb; 
+	--title-color: #15141a; 
+	--gray-color: #909090; 
+	--link-color: #404040; 
+	--p-color: #666262; 
+	--base-font-family: 'Plain-Light', sans-serif; 
+	--title-font-family: 'Plain-Regular', sans-serif; 
+	--font-bold-family: 'Plain-Bold', sans-serif; 
+	--font-weight-bold: bold; 
+	--h1-font-size: 42px;
+	--h2-font-size: 32px; 
+	--h3-font-size: 24px; 
+	--p-font-size: 18px; 
+	--base-font-size: 16px; 
+	--menu-font-size: 14px; 
+	--border-radius-large: 100px; 
+	--border-radius-small: 5px;
+}
+
+body {
+	background: var(--white-color);
+	font-family: var(--base-font-family);
+}
+
+/*---------------------------------------
+     TYPOGRAPHY              
+  -----------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--title-font-family);
+	line-height: inherit;
+}
+
+h1 {
+	color: var(--title-color);
+	font-size: var(--h1-font-size);
+}
+
+h2 {
+	font-size: var(--h2-font-size);
+	font-weight: 100;
+	color: var(--primary-color);
+}
+
+h3 {
+	font-size: var(--h3-font-size);
+	font-weight: 100;
+	margin-bottom: 0;
+}
+
+h4 {
+	color: var(--gray-color);
+	font-family: var(--base-font-family);
+	font-size: var(--p-font-size);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+p {
+	color: var(--p-color);
+	font-size: var(--p-font-size);
+	line-height: 1.5em;
+}
+
+b, strong {
+	letter-spacing: 0;
+	color: var(--primary-color);
+}
+
+/* BUTTON */
+.custom-btn {
+	background: transparent;
+	border: 2px solid var(--dark-color);
+	border-radius: var(--border-radius-large);
+	padding: 12px 26px 14px 26px;
+	color: var(--dark-color);
+	font-family: var(--title-font-family);
+	font-size: var(--p-font-size);
+	white-space: nowrap;
+}
+
+.custom-btn.btn-bg {
+	background: var(--white-color);
+	color: var(--primary-color);
+	border-color: transparent;
+	transition: all .3s ease;
+}
+
+.custom-btn:hover, .custom-btn:focus {
+	background: var(--dark-color);
+	color: var(--white-color);
+	border-color: transparent;
+}
+
+/*---------------------------------------
+     GENERAL               
+  -----------------------------------------*/
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*::before, *::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	color: var(--link-color);
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+	color: var(--primary-color);
+	outline: none;
+	text-decoration: none;
+}
+
+::selection {
+	background: var(--white-color);
+	color: var(--primary-color);
+}
+
+.section-padding {
+	padding: 8em 0;
+}
+
+.section-padding-half {
+	padding: 4em 0;
+}
+
+hr {
+	border-width: 1px;
+	border-color: var(--primary-color);
+	margin-bottom: 70px;
+	margin-top: 70px;
+}
+
+/*---------------------------------------
+     HERO              
+  -----------------------------------------*/
+.hero {
+	position: relative;
+	padding: 7.5em 0;
+	overflow: hidden;
+}
+
+.hero-bg {
+	background: linear-gradient(170deg, var(--primary-color) 64%,
+		var(--white-color) 30%);
+}
+
+.hero-image {
+	position: relative;
+	top: 0em;
+}
+
+/*---------------------------------------
+     FOOTER              
+  -----------------------------------------*/
+.site-footer {
+	background: var(--dark-color);
+	padding: 7em 0 6em 0;
+}
+
+.site-footer a {
+	color: var(--p-color);
+}
+
+.site-footer a:hover, .footer-icon {
+	color: var(--primary-color);
+}
+
+.footer-link li {
+	display: inline-block;
+	list-style: none;
+	margin: 0 10px;
+}
+
+.copyright-text, .footer-link, .site-footer .social-icon {
+	margin-top: 6em;
+}
+
+.copyright-text {
+	margin-top: 5.3em;
+}
+
+/*---------------------------------------
+     SOCIAL ICON              
+  -----------------------------------------*/
+.social-icon {
+	position: relative;
+	padding: 0;
+	margin: 4em 0 0 0;
+}
+
+.social-icon li {
+	display: inline-block;
+	list-style: none;
+}
+
+.social-icon li a {
+	text-decoration: none;
+	display: inline-block;
+	font-size: var(--base-font-size);
+	margin: 10px;
+	text-align: center;
+}
+
+/*---------------------------------------
+     RESPONSIVE STYLES              
+  -----------------------------------------*/
+@media screen and (max-width: 991px) {
+	.hero {
+		padding-top: 4.5em;
+	}
+	.hero-text {
+		bottom: 2em;
+	}
+	.copyright-text, .footer-link, .site-footer .social-icon {
+		margin-top: 3em;
+		padding: 0;
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	h1 {
+		font-size: 36px;
+	}
+	h2 {
+		font-size: 28px;
+	}
+	h3 {
+		font-size: 22px;
+	}
+	.footer-link, .site-footer .social-icon {
+		margin-top: 1em;
+	}
+	.copyright-text {
+		margin: 2.5em 0 1em 0;
+	}
+	.footer-link li {
+		margin-left: 0;
+	}
+}
+/*---------------------------------------
+     choices section STYLES              
+  -----------------------------------------*/
+
+/*add padding to container elements*/
+.tcontainer {
+	padding: 16px;
+}
+/*define the modals background*/
+.tmodal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+	padding-top: 60px;
+}
+/*define the modal-content background*/
+.tmodal-content {
+	background-color: var(--dark-color);
+	margin: 5% auto 15% auto;
+	border-radius: 10px;
+	width: 80%;
+	border: 5px solid var(--primary-color);
+}
+/*define the close button*/
+.tclose {
+	position: absolute;
+	right: 15px;
+	top: 60px;
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+}
+/*define the close hover and focus effects*/
+.tclose:hover, .tclose:focus {
+	color: red;
+	cursor: pointer;
+}
+
+.fa-info-circle {
+	color: var(--dark-color);
+	float: right;
+	font-size: 40px;
+}
+
+.fa-info-circle:hover, .fa-info-circle:focus {
+	color: var(--primary-color);
+	cursor: pointer;
+}
+/* 
+
+---------------------------------------------
+preloader
+--------------------------------------------- 
+*/
+/* 
+ #preloader {
+  overflow: hidden;
+  background-image: linear-gradient(145deg, #3498DB 0%, #4481eb 100%);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 9999;
+  color: #fff;
+}
+
+#preloader .jumper {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  position: absolute;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+}
+
+#preloader .jumper > div {
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  position: absolute;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: jumper 1s 0s linear infinite;
+  animation: jumper 1s 0s linear infinite;
+}
+
+#preloader .jumper > div:nth-child(2) {
+  -webkit-animation-delay: 0.33333s;
+  animation-delay: 0.33333s;
+}
+
+#preloader .jumper > div:nth-child(3) {
+  -webkit-animation-delay: 0.66666s;
+  animation-delay: 0.66666s;
+}
+
+@-webkit-keyframes jumper {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes jumper {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}   */

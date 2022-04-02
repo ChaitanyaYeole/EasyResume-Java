@@ -1,0 +1,182 @@
+body{
+	padding-top: 100px;
+}
+
+.page{
+	height: 1685px;
+	width: 1193px;
+	background-color: #fff;
+	position: relative;
+	margin: auto;
+	
+	z-index: 0;
+	box-shadow: 0px 0px 20px;
+	padding: 0;
+}
+
+button{
+	margin-left: 10px;
+}
+
+table{
+	height: 1685px;
+	width: 1193px;
+	position: relative;
+	
+}
+th, td{
+	padding:0 30px 0 30px;
+	border:1px dashed #000;
+}
+
+
+
+
+.primary{
+	background-color: #808080;
+}
+.secondary{
+	background-color: #c0c0c0;
+}
+.heading{
+	height: 150px;
+}
+.sub-heading{
+	height: 100px;
+}
+
+/* Chronological Resume */
+#chronological{
+	display:none;
+}
+
+table div{
+	
+	font-size:20px;
+	font-family: calibri;
+	
+}
+[contentEditable=true]:empty:not(:focus):before{
+    content:attr(data-text);
+}
+
+#chronological .resume-introduction{
+	width: 843px;
+	height: 280px;
+}
+
+#chronological .resume-contact{
+	width: 350px;
+	height: 280px;
+}
+
+#chronological .resume-experience{
+	width: 843px;
+	height: 1155px;
+}
+
+#chronological .resume-skills{
+	width: 350px;
+	height: 450px;
+}
+#chronological .resume-education{
+	width: 350px;
+	height: 420px;
+}
+
+#chronological .resume-awards{
+	width: 350px;
+	height: 285px;
+}
+
+/* Functional Resume */
+#functional{
+	display:none;
+}
+#functional .resume-introduction{
+	width: 843px;
+	height: 280px;
+}
+
+#functional .resume-contact{
+	width: 350px;
+	height: 280px;
+}
+
+#functional .resume-skills{
+	width: 843px;
+	height: 1155px;
+}
+
+#functional .resume-experience{
+	width: 350px;
+	height: 450px;
+}
+#functional .resume-education{
+	width: 350px;
+	height: 420px;
+}
+
+#functional .resume-awards{
+	width: 350px;
+	height: 285px;
+}
+
+/* Combination Resume */
+#combination{
+	display:none;
+}
+#combination table .primary{
+	height: 30px;
+}
+#combination .resume-contact{
+	width: 400px;
+	height: 250px;
+}
+#combination .resume-introduction{
+	width: 1193px;
+	height: 280px;
+}
+#combination .resume-skills{
+	width: 1193px;
+	height: 150px;
+}
+#combination .resume-experience{
+	width: 1193px;
+	height: 697px;
+}
+#combination .resume-education{
+	width: 1193px;
+	height: 245px;
+}
+
+
+
+/* Printing */
+@media print {
+	body * {
+		visibility: hidden;
+		
+	}
+	.page, .page * {
+		visibility: visible;
+		left: 0;
+		top: 0;
+	}
+	.page {
+		position: absolute;
+		
+		height: 100%;
+		width: 100%;
+	}
+	body{
+	margin-top: 0;
+	}
+	th, td{
+	border: none;
+}
+[contentEditable=true]:empty:not(:focus):before{
+    content:attr(empty);
+}
+	
+}
